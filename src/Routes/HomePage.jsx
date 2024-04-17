@@ -1,5 +1,9 @@
 import NavBar from "../NavBar";
+import Banner from "../Banner";
 
-export default function(){
-    return <NavBar />;
+export default function HomePage(){
+    return (<>
+        <NavBar />
+        <Banner />
+    </>);
 }
