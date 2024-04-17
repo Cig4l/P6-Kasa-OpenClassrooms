@@ -1,8 +1,49 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+$primary-color: #FF6060;
+$secondary-color: white;
+$footer-color: black;
+
+$breakpoints: (
+  "s-screen": 768px,
+  "m-screen": 1024px,
+  "l-screen": 1440px
+);
+
+@mixin breakpoint($point) {           
+  $size: map-get($breakpoints, $point);
+  @media only screen and (max-width: $size) {
+    @content;
+  }
+  else{
+    @warn "Le breakpoint de '#{$point}' n'existe pas."; 
+  }
 }
+
+#root {
+  max-width: 1440px;
+  margin: 25px 100px;
+  text-align: center;
+  background-color: lightgray;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  height: 50px;
+  ul {
+    display: flex;
+    justify-content: space-between;
+    background-color: aquamarine;
+    flex-basis: auto;
+    gap: 50px;
+      li{
+        list-style-type: none;
+        font-size: 24px;
+        font-family: "Montserrat";
+      }
+  }
+}
+
+
+
 
 
