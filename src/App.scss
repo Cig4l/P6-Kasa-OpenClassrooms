@@ -3,10 +3,11 @@ $secondary-color: white;
 $footer-color: black;
 $main-font: "Montserrat", sans-serif;
 
-$breakpoints: (
-  "s-screen": 768px,
-  "m-screen": 1024px,
-  "l-screen": 1440px
+$breakpoints: (           /* moins de 375px */
+  "xs-screen": 375px,
+  "s-screen": 768px,      /* 768-1023px */
+  "m-screen": 1024px,     /* 1024-1439px */
+  "l-screen": 1440px      /* 1440-infini+ px */
 );
 
 @mixin breakpoint($point) {           
@@ -26,12 +27,11 @@ $breakpoints: (
   @include breakpoint(s-screen){
     max-width: 1024px;
   }
-  @include breakpoint(s-screen){
-    max-width: 1024px;
-    margin: 30px;
-  }
   @include breakpoint(m-screen){
     max-width: 1440px;
+    margin: 30px;
+  }
+  @include breakpoint(l-screen){
     margin: 45px 100px;
   }
 }
@@ -39,30 +39,59 @@ $breakpoints: (
 header {
   display: flex;
   justify-content: space-between;
-  height: 50px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
+  @include breakpoint(xs-screen){
+    height: 50px;
+  }
+  @include breakpoint(s-screen){
+    margin-bottom: 30px;
+  }
 
   ul {
     display: flex;
     justify-content: space-between;
     flex-basis: auto;
-    gap: 50px;
+    gap: 15px;
+    flex-wrap: wrap;
+    @include breakpoint(xs-screen){
+      gap: 20px;
+    }
+    @include breakpoint(s-screen){
+      gap: 30px;
+    }
+    @include breakpoint(m-screen){
+      gap: 40px;
+    }
 
       li {
         list-style-type: none;
         
         a {
-          font-size: 24px;
+          font-size: 9px;
           font-family: "Montserrat", sans-serif;
           font-weight: 500;
           font-style: normal;
           text-decoration: none;
           color: black;
+          text-transform: uppercase;
           &:hover {
             text-decoration: underline;
           }
           &:focus {
             color: $primary-color;
+          }
+          @include breakpoint(xs-screen){
+            font-size: 10px;
+          }
+          @include breakpoint(s-screen){
+            font-size: 14px;
+            text-transform: none;
+          }
+          @include breakpoint(m-screen){
+            font-size: 21px;
+          }
+          @include breakpoint(l-screen){
+            font-size: 24px;
           }
         }
       }
@@ -74,34 +103,64 @@ header {
 
   .section-banner {
     width: 100%;
-    height: 223px;
+    height: 111px;
     background: url("assets/images/banner-landscape-1.webp") 60% / cover no-repeat;
     border-radius: 25px;
     filter: brightness(40%);
     z-index: 1;
+    @include breakpoint(s-screen){
+      height: 170px;
+    }
+    @include breakpoint(m-screen){
+      height: 223px;
+    }
   }
 
   .container-title{
     width: 100%;
-    height: 223px;
+    height: 111px;
     z-index: 2;
     position: relative;
-    top: -223px;
+    top: -111px;
+    @include breakpoint(s-screen){
+      height: 170px;
+      top: -170px;
+    }
+    @include breakpoint(m-screen){
+      height: 223px;
+      top: -223px;
+    }
 
     .main-title{
-      height: 223px;
-      padding: 82px 5px;
+      height: 111px;
+      padding: 30px 5px;
       margin: 0;
       width: 100%;
       opacity: 100%;
       color: white;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
       font-family: $main-font;
-      font-size: 48px;
+      font-size: 24px;
       font-style: normal;
       font-weight: 700; 
       position: absolute;
-      text-align: center;
+      text-align: left;
+      max-width: 225px;
+      @include breakpoint(xs-screen){
+        padding: 43px 5px;
+        text-align: center;
+        max-width: none;
+      }
+      @include breakpoint(s-screen){
+        font-size: 36px;
+        height: 170px;
+        padding: 67px 5px;
+      }
+      @include breakpoint(m-screen){
+        font-size: 48px;
+        height: 223px;
+        padding: 82px 5px;
+      }
     }
   }
 }
