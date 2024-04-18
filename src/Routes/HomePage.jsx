@@ -1,13 +1,9 @@
-import NavBar from "../NavBar";
-import Banner from "../Banner";
-import Footer from "./Footer";
+import Banner from "../Components/Banner";
+import Layout from "../SCSS/Layout";
 
 export default function HomePage(){
+    const children = <Banner />;
     return (<>
-        <main className="main-container">
-            <NavBar />
-            <Banner />
-        </main>
-        <Footer />
+        <Layout children={children} />
     </>);
 }

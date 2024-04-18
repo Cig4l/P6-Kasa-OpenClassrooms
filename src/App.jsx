@@ -1,4 +1,4 @@
-import './App.scss';
+import './SCSS/App.scss';
 import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
 import HomePage from "./Routes/HomePage.jsx";
 import About from "./Routes/About.jsx";
