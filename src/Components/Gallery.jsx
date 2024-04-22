@@ -5,28 +5,27 @@ export default function Gallery (props) {
     return (<>
         <section className="gallery-section">
             <div className="gallery-item">
-                {/* <a className="gallery-link" style={backgroundImg} href="#"></a> */}
-                <Link to="/ficheProduit" className="gallery-link" style={backgroundImg}>A propos</Link>
+                <Link to="/ficheProduit" className="gallery-link" style={backgroundImg}></Link>
                 <h2 className="gallery-item-name">Nom de la location</h2>
             </div>
             <div className="gallery-item">
-                <a className="gallery-link" style={backgroundImg} href="#"></a>
+                <Link to="/ficheProduit" className="gallery-link" style={backgroundImg}></Link>
                 <h2 className="gallery-item-name">Nom de la location</h2>
             </div>
             <div className="gallery-item">
-                <a className="gallery-link" style={backgroundImg} href="#"></a>
+                <Link to="/ficheProduit" className="gallery-link" style={backgroundImg}></Link>
                 <h2 className="gallery-item-name">Nom de la location</h2>
             </div>
             <div className="gallery-item">
-                <a className="gallery-link" style={backgroundImg} href="#"></a>
+                <Link to="/ficheProduit" className="gallery-link" style={backgroundImg}></Link>
                 <h2 className="gallery-item-name">Nom de la location</h2>
             </div>
             <div className="gallery-item">
-                <a className="gallery-link" style={backgroundImg} href="#"></a>
+                <Link to="/ficheProduit" className="gallery-link" style={backgroundImg}></Link>
                 <h2 className="gallery-item-name">Nom de la location</h2>
             </div>
             <div className="gallery-item">
-                <a className="gallery-link" style={backgroundImg} href="#"></a>
+                <Link to="/ficheProduit" className="gallery-link" style={backgroundImg}></Link>
                 <h2 className="gallery-item-name">Nom de la location</h2>
             </div>
         </section>
