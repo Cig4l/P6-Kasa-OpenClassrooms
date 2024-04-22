@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-do
 import HomePage from "./Routes/HomePage.jsx";
 import About from "./Routes/About.jsx";
 import FicheProduit from './Routes/FicheProduit.jsx';
+import PageNotFound from "./Routes/PageNotFound.jsx";
 
 export default function App() {
   return (
@@ -11,7 +12,8 @@ export default function App() {
         <Route>
           <Route path="/" element={<HomePage />} />    
           <Route path="/about" element={<About />} />    
-          <Route path="/ficheProduit" element={<FicheProduit />} />    
+          <Route path="/ficheProduit" element={<FicheProduit />} />
+          <Route path="/pageNotFound" element={<PageNotFound />} />     
         </Route>
       </Routes>
     </BrowserRouter>

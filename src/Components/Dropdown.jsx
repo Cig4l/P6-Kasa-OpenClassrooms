@@ -6,9 +6,9 @@ export default function(props){
     const description = "";
 
     return (<>
-        <div className="dropdown-button">
+        <button className="dropdown-button">
             <h4>{name}</h4>
             <p>{up}</p>
-        </div>
+        </button>
     </>)
 }

@@ -29,7 +29,7 @@ export default function Produit(props){
                     </div>
                 </div>
             </div>
-            <div className="dropdowns-container">
+            <div className="dropdowns-container" id="dropdows-produits">
                 <Dropdown name="Description" />
                 <Dropdown name="Equipements" />
             </div>
