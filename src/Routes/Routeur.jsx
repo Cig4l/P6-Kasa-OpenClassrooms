@@ -9,13 +9,27 @@ export default function Routeur() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route>
-          <Route path="/" element={<HomePage />} />    
-          <Route path="/about" element={<About />} />    
-          <Route path="/ficheProduit" element={<FicheProduit />} />
-          <Route path="/pageNotFound" element={<PageNotFound />} />     
-        </Route>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/ficheProduit" element={<FicheProduit />} />
+        {/* Aucun chemin spécifié : correspond aux routes inconnues */}
+        <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
+
+// export default function Routeur() {
+//   return (
+//     <BrowserRouter>
+//       <Routes>
+//         <Route>
+//           <Route path="/" element={<HomePage />} />    
+//           <Route path="/about" element={<About />} />    
+//           <Route path="/ficheProduit" element={<FicheProduit />} />
+//           <Route path="/pageNotFound" element={<PageNotFound />} />     
+//         </Route>
+//       </Routes>
+//     </BrowserRouter>
+//   )
+// }
