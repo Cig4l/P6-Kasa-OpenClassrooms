@@ -1,10 +1,19 @@
 import { Link } from "react-router-dom"
+import logements from "../assets/logements.json";
 
 export default function Gallery (props) {
     const backgroundImg = {backgroundImage: 'url(https://s3-eu-west-1.amazonaws.com/course.oc-static.com/projects/front-end-kasa-project/accommodation-20-1.jpg)'}
+    const galleryItems = logements.map((logement, index) => (
+        <div className="gallery-item" key={index} id={`logement-${logement.id}`}>
+        <Link to="/ficheProduit" className="gallery-link" style={backgroundImg}></Link>
+        <h2 className="gallery-item-name">Nom de la location</h2></div>
+    ));
+    
     return (<>
+
         <section className="gallery-section">
-            <div className="gallery-item">
+            {galleryItems}
+            {/* <div className="gallery-item">
                 <Link to="/ficheProduit" className="gallery-link" style={backgroundImg}></Link>
                 <h2 className="gallery-item-name">Nom de la location</h2>
             </div>
@@ -27,7 +36,7 @@ export default function Gallery (props) {
             <div className="gallery-item">
                 <Link to="/ficheProduit" className="gallery-link" style={backgroundImg}></Link>
                 <h2 className="gallery-item-name">Nom de la location</h2>
-            </div>
+            </div> */}
         </section>
     </>)
 }
