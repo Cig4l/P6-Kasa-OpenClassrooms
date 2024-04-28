@@ -6,13 +6,15 @@ import PageNotFound from "./PageNotFound.jsx";
 import logements from "../assets/logements.json";
 
 export default function Routeur() {
+  const logementsLink = logements.map((logement, index) => (
+    <Route path={`/${logement.id}`} key={index} element={<FicheProduit id={logement.id} title={logement.title} cover={logement.cover} description={logement.description} pictures={logement.pictures} host={logement.host} rating={logement.rating} location={logement.location} equipments={logement.equipments} tags={logement.tags} />} />
+  ));
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
-        <Route path="/ficheProduit" element={<FicheProduit />} />
-        {/* Aucun chemin spécifié : correspond aux routes inconnues */}
+        {logementsLink}
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
     </BrowserRouter>
