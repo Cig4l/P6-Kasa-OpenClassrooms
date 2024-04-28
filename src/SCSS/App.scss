@@ -230,15 +230,19 @@ header {
 
 .gallery-section {        // Locations
   margin-top: 45px;
-  padding: 50px;
+  padding: 0;
   background-color: #F6F6F6;
   border-radius: 25px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 20px;
+  @include breakpoint(xs-screen){
+    padding: 30px;
+  }
   @include breakpoint(m-screen){
     gap: 30px;
+    padding: 50px;
   }
   @include breakpoint(l-screen){
     gap: 50px;
@@ -255,7 +259,7 @@ header {
     @include breakpoint(s-screen){
       width: 47%;
     }
-    @include breakpoint(l-screen){
+    @include breakpoint(m-screen){
       width: 30%;
     }
 

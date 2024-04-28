@@ -8,7 +8,7 @@ export default function Gallery (props) {
         <div className="gallery-item" key={index} id={`logement-${logement.id}`}>
             <div className="gallery-link" style={{backgroundImage: `url(${logement.cover})`}}></div>
             <h2 className="gallery-item-name">{logement.title}</h2>
-            <Link to={`/${logement.id}`} class="gallery-gradient"></Link>
+            <Link to={`/${logement.id}`} className="gallery-gradient"></Link>
         </div>
     ));
     
