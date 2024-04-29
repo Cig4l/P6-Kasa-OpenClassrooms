@@ -313,8 +313,11 @@ header {
 .dropdowns-container{       
   display: flex;
   width: 100%;
-  gap: 20px;
+  gap: 10px;
   flex-direction: column;
+  @include breakpoint(s-screen){
+    gap: 0;
+  }
 
   .dropdown-button{
     background-color: $primary-color;
@@ -363,11 +366,36 @@ header {
     justify-content: space-between;
     gap: 75px;
   }
-  // button {
-  //   @include breakpoint(s-screen){
-  //     width: 50%;
-  //   }
-  // }
+}
+.description{
+  font-family: $main-font;
+  margin: 0;
+  padding: 10px;
+  font-size: 12px;
+  list-style-type: none;
+  @include breakpoint(xs-screen){
+    font-size: 14px;
+    padding: 0 20px 10px 20px;
+  }
+  @include breakpoint(s-screen){
+    margin: 15px;
+  }
+  @include breakpoint(m-screen){
+    font-size: 16px;
+  }
+}
+#list-description{
+  padding: 0;margin: 0;
+}
+.description-ul{
+  margin: 0;
+  padding: 10px;
+  @include breakpoint(xs-screen){
+    padding: 0 20px 10px 20px;
+  }
+  @include breakpoint(s-screen){
+    margin: 15px;
+  }
 }
 
 

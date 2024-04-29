@@ -15,14 +15,14 @@ export default function(props){
     function parseDescription(){
         if(Array.isArray(description)){
             return (
-                <ul>
+                <ul class="description-ul">
                   {description.map((string, index) => (
-                    <li key={index}>{string}</li>
+                    <li key={index} className="description" id="list-description">{string}</li>
                   ))}
                 </ul>
               );
         }
-        return <p>{description}</p>;
+        return <p className="description">{description}</p>;
     }
 
     return (
