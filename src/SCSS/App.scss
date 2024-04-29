@@ -640,3 +640,43 @@ div.main-produit-container{         // <Produit />
     gap: 20px;
   }
 }
+
+/*                                ERREUR 404                                 */
+
+.not-found-container{
+  margin-top: 93px;
+  margin-bottom: 86px;
+  display: flex;
+  gap: 113px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-family: $main-font;
+  @include breakpoint(s-screen){
+    margin-top: 109px;
+    margin-bottom: 102px;
+    gap: 139px;
+  }
+  
+  img{
+    height: 99px;
+    width: 100%;
+    object-fit: contain;
+    @include breakpoint(xs-screen){
+      height: 150px;
+    }
+    @include breakpoint(s-screen){
+      height: 263px;
+    }
+  }
+  p{
+    font-size: 18px;
+    color: $primary-color;
+    @include breakpoint(s-screen){
+      font-size: 36px;
+    }
+  }
+  a{
+    color: black;
+  }
+}
