@@ -66,6 +66,8 @@ body{
   }
 }
 
+/*                          LAYOUT                     */
+
 header {
   display: flex;
   justify-content: space-between;
@@ -131,7 +133,7 @@ header {
   text-decoration: underline;
 }
 
-.main-section{          // Bannière
+.main-section{          
   position: relative;
 
   .section-banner {
@@ -228,7 +230,9 @@ header {
   }
 }
 
-.gallery-section {        // Locations
+/*                           COMPOSANT GALLERY                       */
+
+.gallery-section {        
   margin-top: 45px;
   padding: 0;
   background-color: #F6F6F6;
@@ -309,6 +313,8 @@ header {
     }
   }
 }
+
+/*                       COMPOSANT DROPDOWN                         */
 
 .dropdowns-container{       
   display: flex;
@@ -410,8 +416,9 @@ header {
   }
 }
 
+/*                          COMPOSANT CAROUSEL                        */
 
-div.carousel-container{    // Carousel Fiche Logement
+div.carousel-container{    
   position: relative;
   width: 100%;
   margin-bottom: 15px;
@@ -463,7 +470,9 @@ div.carousel-container{    // Carousel Fiche Logement
   }
 }
 
-div.main-produit-container{         // <Produit />
+/*                             COMPOSANT PRODUIT                      */
+
+div.main-produit-container{         
   display: flex;
   justify-content: space-between;
   flex-direction: column;
