@@ -31,7 +31,7 @@ export default function(props){
                 <h4>{name}</h4>
                 <p>{collapsed ? up : down}</p>
             </button>
-            <div className={`collapse-text ${collapsed ? 'collapsed' : 'expanded'}`}>{!collapsed ? parseDescription() : <></>}</div>
+            <div className={`collapse-text ${!collapsed ? 'collapsed' : 'expanded'}`}>{parseDescription()}</div>
             {/* <div className="collapse-text">{collapsed ? parseDescription() : <></>}</div> */}
         </div>
     )

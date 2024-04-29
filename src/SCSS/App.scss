@@ -367,6 +367,19 @@ header {
     gap: 75px;
   }
 }
+
+.collapse-text{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.5s ease-in-out;
+  &.collapsed{
+    max-height: 0;
+  }
+  &.expanded{
+    max-height: 1000px;
+  }
+}
+
 .description{
   font-family: $main-font;
   margin: 0;
