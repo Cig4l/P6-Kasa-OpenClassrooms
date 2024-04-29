@@ -15,7 +15,7 @@ export default function(props){
     function parseDescription(){
         if(Array.isArray(description)){
             return (
-                <ul class="description-ul">
+                <ul className="description-ul">
                   {description.map((string, index) => (
                     <li key={index} className="description" id="list-description">{string}</li>
                   ))}
@@ -31,7 +31,7 @@ export default function(props){
                 <h4>{name}</h4>
                 <p>{collapsed ? up : down}</p>
             </button>
-            <div className={`collapse-text ${!collapsed ? 'collapsed' : 'expanded'}`}>{parseDescription()}</div>
+            <div className={`collapse-text ${collapsed ? 'collapsed' : 'expanded'}`}>{parseDescription()}</div>
             {/* <div className="collapse-text">{collapsed ? parseDescription() : <></>}</div> */}
         </div>
     )
