@@ -360,8 +360,12 @@ header {
       }
     }
 
-    p{
+    div{
       margin: 0;
+      transition: transform 0.5s ease;
+      &.flipped{
+        transform: scaleY(-1);
+      }
     }
   }
 }
@@ -377,7 +381,7 @@ header {
 .collapse-text{
   max-height: 0;
   overflow: hidden;
-  transition: max-height 1s ease-in-out;
+  transition: max-height 0.5s ease-in-out;
   &.collapsed{
     max-height: 0;
   }
