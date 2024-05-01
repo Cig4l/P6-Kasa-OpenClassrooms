@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link, useNavigate } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import HomePage from "./HomePage.jsx";
 import About from "./About.jsx";
 import FicheProduit from './FicheProduit.jsx';
@@ -10,14 +10,14 @@ export default function Routeur() {
     <Route path={`/${logement.id}`} key={index} element={<FicheProduit id={logement.id} title={logement.title} cover={logement.cover} description={logement.description} pictures={logement.pictures} host={logement.host} rating={logement.rating} location={logement.location} equipments={logement.equipments} tags={logement.tags} />} />
   ));
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<About />} />
         {logementsLink}
         <Route path="/*" element={<PageNotFound />} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
