@@ -1,6 +1,7 @@
 {
   "name": "p6-kasa",
-  "private": true,
+  "private": false,    
+  "homepage" : "https://cig4l.github.io/P6-Kasa-OpenClassrooms/",
   "version": "0.0.0",
   "type": "module",
   "scripts": {
