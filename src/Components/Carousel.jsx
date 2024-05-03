@@ -29,7 +29,9 @@ export default function Carousel (props) {
     return (<>
         <div className="carousel-container" aria-label="carousel d'images">
             <img className="carousel-img" src={pictures[currentIndex]} />
-            <p className="carousel-index">{currentIndex+1}/{pictures.length}</p>
+            {pictures.length > 1 && (
+                <p className="carousel-index">{currentIndex+1}/{pictures.length}</p>
+            )}
             {pictures.length > 1 && (
                 <div className="nav-arrows-container">
                     <button className="nav-arrow" id="prev-arrow" onClick={prevImage} >{prevArrow}</button>
